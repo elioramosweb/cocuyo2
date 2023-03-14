@@ -290,5 +290,16 @@ if uploaded_file is not None:
     fig = polarPlot(dataframe,miTitulo,miFecha,colores,
                     mostrarPuntos,direccion,mostrarContornos)
 
+    fn = "mapa" + miTitulo + miFecha + ".png"
+    img = io.BytesIO()
+    pyplot.savefig(img,format='png',bbox_inches='tight')
+    
+    btn = st.download_button(
+        label ='Bajar Imagen',
+        data=img,
+        file_name=fn,
+        mime="image/png"
+    )
+    
     st.pyplot(fig)
 
