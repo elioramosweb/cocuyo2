@@ -13,6 +13,7 @@ import numpy as np
 import io
 from io import StringIO
 import math
+import datetime
 
 
 
@@ -291,7 +292,7 @@ if uploaded_file is not None:
     fig = polarPlot(dataframe,miTitulo,miFecha,colores,
                     mostrarPuntos,direccion,mostrarContornos)
 
-    fn = "mapa" + miTitulo + miFecha + ".png"
+    fn = "mapa.png"
     img = io.BytesIO()
     pyplot.savefig(img,format='png',bbox_inches='tight')
     
