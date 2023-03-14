@@ -279,8 +279,7 @@ if uploaded_file is not None:
     
     data = np.loadtxt(uploaded_file)
 
-    dataframe import datetime= pd.DataFrame(data,
-                             columns=['azimuth','elevation','magnitude'])
+    dataframe = pd.DataFrame(data,columns=['azimuth','elevation','magnitude'])
     
     st.sidebar.table(dataframe.style.format("{:4.1f}"))
 
