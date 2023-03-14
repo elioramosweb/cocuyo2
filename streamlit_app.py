@@ -13,9 +13,6 @@ import numpy as np
 import io
 from io import StringIO
 import math
-import datetime
-
-
 
 ###################################
 # funcion para interpolar los datos
